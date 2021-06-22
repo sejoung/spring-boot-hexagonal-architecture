@@ -1,0 +1,5 @@
+rootProject.name = 'hexagonal-architecture'
+
+include 'domain'
+include 'adapters:jpa-persistence'
+

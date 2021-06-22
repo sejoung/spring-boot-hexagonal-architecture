@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.github.sejoung.product.usecases.service.SaveRoundProductServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-22T10:55:32" hostname="beniui-MacBookPro.local" time="0.286">
+  <properties/>
+  <testcase name="회차권 저장" classname="io.github.sejoung.product.usecases.service.SaveRoundProductServiceTest" time="0.286"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[6월 22, 2021 7:55:32 오후 org.hibernate.validator.internal.util.Version <clinit>
+INFO: HV000001: Hibernate Validator 7.0.1.Final
+]]></system-err>
+</testsuite>
