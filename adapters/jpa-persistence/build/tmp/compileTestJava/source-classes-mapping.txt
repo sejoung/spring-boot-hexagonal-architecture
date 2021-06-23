@@ -1,2 +1,0 @@
-io/github/sejoung/product/repository/ProductRepositoryTest.java
- io.github.sejoung.product.repository.ProductRepositoryTest
