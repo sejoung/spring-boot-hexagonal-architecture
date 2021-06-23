@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import io.github.sejoung.product.entities.Category;
 import io.github.sejoung.product.entities.Product;
 
-
 class SaveRoundProductInUseCaseTest {
 
     @DisplayName("Commend 회차권 count는 99 이하여야 합니다")
@@ -18,8 +17,13 @@ class SaveRoundProductInUseCaseTest {
     void validationSaveRoundProductCommand() {
 
         Throwable exception = assertThrows(ConstraintViolationException.class, () -> {
-            var command = new SaveRoundProductInUseCase.SaveRoundProductCommand(null, 1L, Category.ProductType.ROUND,
-                Product.ProductStatus.CREATE, "2회권", 999);
+            SaveRoundProductInUseCase.SaveRoundProductCommand.builder()
+                .categoryId(1L)
+                .status(Product.ProductStatus.CREATE)
+                .productName("안녕")
+                .count(999)
+                .build();
+
         });
 
         assertEquals("count: 99 이하여야 합니다", exception.getMessage());

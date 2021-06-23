@@ -9,14 +9,17 @@ import io.github.sejoung.product.entities.Category;
 import io.github.sejoung.product.entities.Product;
 import io.github.sejoung.product.validating.SelfValidating;
 
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
 public interface SaveRoundProductInUseCase {
 
     SaveRoundProductCommand save(SaveRoundProductCommand command);
 
     @Getter
+    @ToString
     @EqualsAndHashCode(callSuper = false)
     final class SaveRoundProductCommand extends SelfValidating<SaveRoundProductCommand> {
 
@@ -38,11 +41,12 @@ public interface SaveRoundProductInUseCase {
         @Max(99)
         private final Integer count;
 
-        public SaveRoundProductCommand(Long productId, Long categoryId, Category.ProductType productType,
+        @Builder
+        private SaveRoundProductCommand(Long productId, Long categoryId,
             Product.ProductStatus status, String productName, Integer count) {
             this.productId = productId;
             this.categoryId = categoryId;
-            this.productType = productType;
+            this.productType = Category.ProductType.ROUND;
             this.status = status;
             this.productName = productName;
             this.count = count;

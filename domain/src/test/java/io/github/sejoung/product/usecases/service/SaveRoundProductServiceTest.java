@@ -22,8 +22,12 @@ class SaveRoundProductServiceTest {
     @DisplayName("회차권 저장")
     @Test
     void saveTest() {
-        var command = new SaveRoundProductInUseCase.SaveRoundProductCommand(null, 1L, Category.ProductType.ROUND,
-            Product.ProductStatus.CREATE, "2회권", 2);
+        var command = SaveRoundProductInUseCase.SaveRoundProductCommand.builder()
+            .productName("회차권")
+            .count(99)
+            .categoryId(1L)
+            .status(Product.ProductStatus.CREATE)
+            .build();
         var actual = service.save(command);
         Assertions.assertEquals(99, actual.getProductId());
     }

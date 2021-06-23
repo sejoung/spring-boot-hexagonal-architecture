@@ -1,14 +1,20 @@
 package io.github.sejoung.product.mapper;
 
+import io.github.sejoung.product.entities.Product;
 import io.github.sejoung.product.entities.RoundProduct;
 import io.github.sejoung.product.usecases.port.in.SaveRoundProductInUseCase;
 
 public interface SaveRoundProductCommandMapper {
 
     static SaveRoundProductInUseCase.SaveRoundProductCommand toDto(RoundProduct roundProduct) {
-        return new SaveRoundProductInUseCase.SaveRoundProductCommand(roundProduct.getProductId(),
-            roundProduct.getCategory().getCategoryId(), roundProduct.getCategory().getProductType(),
-            roundProduct.getStatus(), roundProduct.getProductName(), roundProduct.getCount());
+        return SaveRoundProductInUseCase.SaveRoundProductCommand.builder()
+            .productName(roundProduct.getProductName())
+            .productId(roundProduct.getProductId())
+            .status(
+                Product.ProductStatus.valueOf(roundProduct.getStatus().name()))
+            .categoryId(roundProduct.getCategory().getCategoryId())
+            .count(roundProduct.getCount())
+            .build();
     }
 
     static RoundProduct toEntity(SaveRoundProductInUseCase.SaveRoundProductCommand command) {

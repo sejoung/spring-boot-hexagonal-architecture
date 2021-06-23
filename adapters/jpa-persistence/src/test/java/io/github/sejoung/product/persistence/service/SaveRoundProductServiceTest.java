@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import io.github.sejoung.product.persistence.repository.ProductRepository;
-import io.github.sejoung.product.persistence.util.TestUtil;
+import io.github.sejoung.product.persistence.util.JpaTestUtil;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -27,7 +27,7 @@ class SaveRoundProductServiceTest {
 
     @Test
     void saveRoundProduct() {
-        var actual = service.saveRoundProduct(TestUtil.defaultRoundProduct());
+        var actual = service.saveRoundProduct(JpaTestUtil.defaultRoundProduct());
         log.debug("{}",actual);
         assertThat(actual.getProductId()).isNotNull();
 
