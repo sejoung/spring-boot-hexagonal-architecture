@@ -1,22 +1,22 @@
 package io.github.sejoung.product.usecases.service;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import io.github.sejoung.product.entities.Category;
 import io.github.sejoung.product.entities.Product;
 import io.github.sejoung.product.usecases.port.in.SaveRoundProductInUseCase;
 import io.github.sejoung.product.usecases.port.out.SaveRoundProductOutUseCaseStub;
 
-class SaveRoundProductServiceTest {
-
-    private SaveRoundProductService service;
+class DomainSaveRoundProductServiceTest {
+    private DomainSaveRoundProductService service;
 
     @BeforeEach
     void setUp() {
-        this.service = new SaveRoundProductService(new SaveRoundProductOutUseCaseStub());
+        this.service = new DomainSaveRoundProductService(new SaveRoundProductOutUseCaseStub());
     }
 
     @DisplayName("회차권 저장")

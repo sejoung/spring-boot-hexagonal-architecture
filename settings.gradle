@@ -3,4 +3,5 @@ rootProject.name = 'hexagonal-architecture'
 include 'domain'
 include 'adapters:jpa-persistence'
 include 'adapters:rest'
+include 'configuration'
 

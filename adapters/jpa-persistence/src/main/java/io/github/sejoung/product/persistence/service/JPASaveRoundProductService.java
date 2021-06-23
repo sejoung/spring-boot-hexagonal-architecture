@@ -8,11 +8,11 @@ import io.github.sejoung.product.persistence.mapper.RoundProductMapper;
 import io.github.sejoung.product.persistence.repository.ProductRepository;
 import io.github.sejoung.product.usecases.port.out.SaveRoundProductOutUseCase;
 
-public class SaveRoundProductService implements SaveRoundProductOutUseCase {
+public class JPASaveRoundProductService implements SaveRoundProductOutUseCase {
 
     private final ProductRepository repository;
 
-    public SaveRoundProductService(ProductRepository repository) {
+    public JPASaveRoundProductService(ProductRepository repository) {
         this.repository = repository;
     }
 

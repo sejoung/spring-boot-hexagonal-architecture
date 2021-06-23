@@ -1,6 +1,7 @@
 package io.github.sejoung.product.persistence.service;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,22 +14,21 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @DataJpaTest
-class SaveRoundProductServiceTest {
-
+class JPASaveRoundProductServiceTest {
     @Autowired
     private ProductRepository repository;
 
-    private SaveRoundProductService service;
+    private JPASaveRoundProductService service;
 
     @BeforeEach
     void setUp() {
-        service = new SaveRoundProductService(repository);
+        service = new JPASaveRoundProductService(repository);
     }
 
     @Test
     void saveRoundProduct() {
         var actual = service.saveRoundProduct(JpaTestUtil.defaultRoundProduct());
-        log.debug("{}",actual);
+        log.debug("{}", actual);
         assertThat(actual.getProductId()).isNotNull();
 
     }

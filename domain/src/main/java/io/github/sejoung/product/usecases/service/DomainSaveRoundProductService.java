@@ -4,11 +4,11 @@ import io.github.sejoung.product.mapper.SaveRoundProductCommandMapper;
 import io.github.sejoung.product.usecases.port.in.SaveRoundProductInUseCase;
 import io.github.sejoung.product.usecases.port.out.SaveRoundProductOutUseCase;
 
-public class SaveRoundProductService implements SaveRoundProductInUseCase {
+public class DomainSaveRoundProductService implements SaveRoundProductInUseCase {
 
     private final SaveRoundProductOutUseCase saveRoundProductOutUseCase;
 
-    public SaveRoundProductService(SaveRoundProductOutUseCase saveRoundProductOutUseCase) {
+    public DomainSaveRoundProductService(SaveRoundProductOutUseCase saveRoundProductOutUseCase) {
         this.saveRoundProductOutUseCase = saveRoundProductOutUseCase;
     }
 
