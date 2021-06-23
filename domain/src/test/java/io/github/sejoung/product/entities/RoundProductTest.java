@@ -2,10 +2,12 @@ package io.github.sejoung.product.entities;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.validation.ConstraintViolationException;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import jakarta.validation.ConstraintViolationException;
+
 
 class RoundProductTest {
 

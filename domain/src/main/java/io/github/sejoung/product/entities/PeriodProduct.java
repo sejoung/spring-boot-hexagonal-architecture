@@ -2,7 +2,7 @@ package io.github.sejoung.product.entities;
 
 import java.time.LocalDate;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 
 import lombok.Getter;
 import lombok.ToString;

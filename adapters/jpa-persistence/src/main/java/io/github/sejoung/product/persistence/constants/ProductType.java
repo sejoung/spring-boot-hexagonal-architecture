@@ -1,7 +1,8 @@
-package io.github.sejoung.product.constants;
+package io.github.sejoung.product.persistence.constants;
 
-import io.github.sejoung.product.entities.PeriodProductEntity;
-import io.github.sejoung.product.entities.RoundProductEntity;
+
+import io.github.sejoung.product.persistence.entities.PeriodProductEntity;
+import io.github.sejoung.product.persistence.entities.RoundProductEntity;
 import lombok.Getter;
 
 @Getter

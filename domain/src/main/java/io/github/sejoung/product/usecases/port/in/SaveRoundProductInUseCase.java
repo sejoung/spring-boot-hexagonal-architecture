@@ -1,12 +1,14 @@
 package io.github.sejoung.product.usecases.port.in;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 import io.github.sejoung.product.entities.Category;
 import io.github.sejoung.product.entities.Product;
 import io.github.sejoung.product.validating.SelfValidating;
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.NotNull;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 

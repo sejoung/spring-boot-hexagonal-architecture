@@ -2,12 +2,14 @@ package io.github.sejoung.product.usecases.port.in;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import javax.validation.ConstraintViolationException;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import io.github.sejoung.product.entities.Category;
 import io.github.sejoung.product.entities.Product;
-import jakarta.validation.ConstraintViolationException;
+
 
 class SaveRoundProductInUseCaseTest {
 

@@ -1,10 +1,11 @@
-package io.github.sejoung.product.entities;
+package io.github.sejoung.product.persistence.entities;
 
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
-import io.github.sejoung.product.constants.ProductType;
+import io.github.sejoung.product.persistence.constants.ProductStatus;
+import io.github.sejoung.product.persistence.constants.ProductType;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,9 +22,9 @@ public class RoundProductEntity extends ProductEntity {
     @Column(name = "cnt", nullable = false)
     private Integer count;
 
-    public RoundProductEntity(String productName, ProductType productType,
-        Long categoryId, Integer count) {
-        super(productName, productType, categoryId);
+    public RoundProductEntity(String productName,
+        Long categoryId, ProductStatus productStatus, Integer count) {
+        super(productName, ProductType.ROUND, categoryId, productStatus);
         this.count = count;
     }
 }

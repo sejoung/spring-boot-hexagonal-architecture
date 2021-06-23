@@ -7,11 +7,13 @@ jar {
 }
 
 dependencies {
-  implementation 'org.hibernate:hibernate-validator:7.0.1.Final'
-  implementation 'org.glassfish:jakarta.el:4.0.1'
+  implementation 'javax.validation:validation-api:2.0.1.Final'
+
   implementation "org.mapstruct:mapstruct:1.4.2.Final"
   annotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
 
+  testImplementation 'org.hibernate:hibernate-validator:6.2.0.Final'
+  testImplementation 'org.glassfish:javax.el:3.0.0'
   testAnnotationProcessor "org.mapstruct:mapstruct-processor:1.4.2.Final"
   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'

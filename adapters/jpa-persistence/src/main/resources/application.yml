@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        discriminator:
+          ignore_explicit_for_joined: true
+    database-platform: org.hibernate.dialect.H2Dialect

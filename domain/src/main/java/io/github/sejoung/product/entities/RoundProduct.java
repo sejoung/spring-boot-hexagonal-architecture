@@ -1,7 +1,9 @@
 package io.github.sejoung.product.entities;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.Min;
+
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 
 import lombok.Getter;
 import lombok.ToString;
