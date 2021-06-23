@@ -28,6 +28,15 @@ hs_err_pid*
 
 /.gradle/
 
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
 # Created by https://www.gitignore.io/api/intellij+all
 
 ### Intellij+all ###
@@ -98,4 +107,4 @@ fabric.properties
 
 .DS_Store
 
-/build
+build/

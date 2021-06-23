@@ -20,8 +20,8 @@ class ProductRepositoryTest {
     @Test
     void test() {
 
-        entityManager.persistAndFlush(new RoundProductEntity("회차권", ProductType.ROUND, 1L, 1));
 
+        repository.saveAndFlush(new RoundProductEntity("회차권", ProductType.ROUND, 1L, 1));
         repository.findAll().forEach(productEntity -> {
             System.out.println(productEntity);
         });
