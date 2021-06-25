@@ -28,13 +28,20 @@ class SaveRoundProductControllerTest {
     void saveRoundProduct() throws Exception {
 
         var objectMapper = new ObjectMapper();
+        var roundProductCommand = RestTestUtil.defaultSaveRoundProductCommand(null);
         var json = objectMapper.writeValueAsString(RestTestUtil.defaultSaveRoundProductCommand(null));
         mockMvc.perform(post(URL)
             .contentType(MediaType.APPLICATION_JSON)
             .accept(MediaType.APPLICATION_JSON)
             .content(json))
             .andDo(print())
-            .andExpect(status().isOk());
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.productId").value(1))
+            .andExpect(jsonPath("$.categoryId").value(roundProductCommand.getCategoryId()))
+            .andExpect(jsonPath("$.productType").value(roundProductCommand.getProductType().name()))
+            .andExpect(jsonPath("$.status").value(roundProductCommand.getStatus().name()))
+            .andExpect(jsonPath("$.productName").value(roundProductCommand.getProductName()))
+            .andExpect(jsonPath("$.count").value(roundProductCommand.getCount()));
 
     }
 }

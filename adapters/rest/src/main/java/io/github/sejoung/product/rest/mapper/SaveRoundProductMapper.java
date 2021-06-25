@@ -1,6 +1,7 @@
 package io.github.sejoung.product.rest.mapper;
 
 import io.github.sejoung.product.entities.Product;
+import io.github.sejoung.product.rest.constants.ProductStatus;
 import io.github.sejoung.product.rest.constants.ProductType;
 import io.github.sejoung.product.rest.dto.SaveRoundProduct;
 import io.github.sejoung.product.usecases.port.in.SaveRoundProductInUseCase;
@@ -22,6 +23,7 @@ public interface SaveRoundProductMapper {
             .productId(command.getProductId())
             .productName(command.getProductName())
             .categoryId(command.getCategoryId())
+            .status(ProductStatus.valueOf(command.getStatus().name()))
             .count(command.getCount())
             .build();
     }
