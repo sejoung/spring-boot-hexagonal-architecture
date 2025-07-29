@@ -1,11 +1,12 @@
 package io.github.sejoung.product.persistence.entities;
 
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
+
 
 import io.github.sejoung.product.persistence.constants.ProductStatus;
 import io.github.sejoung.product.persistence.constants.ProductType;
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

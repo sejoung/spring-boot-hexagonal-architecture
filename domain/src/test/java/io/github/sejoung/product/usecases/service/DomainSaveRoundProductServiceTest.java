@@ -1,15 +1,12 @@
 package io.github.sejoung.product.usecases.service;
 
-import static org.junit.jupiter.api.Assertions.*;
-
+import io.github.sejoung.product.entities.Product;
+import io.github.sejoung.product.usecases.port.in.SaveRoundProductInUseCase;
+import io.github.sejoung.product.usecases.port.out.SaveRoundProductOutUseCaseStub;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import io.github.sejoung.product.entities.Product;
-import io.github.sejoung.product.usecases.port.in.SaveRoundProductInUseCase;
-import io.github.sejoung.product.usecases.port.out.SaveRoundProductOutUseCaseStub;
 
 class DomainSaveRoundProductServiceTest {
     private DomainSaveRoundProductService service;

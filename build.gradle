@@ -1,11 +1,11 @@
 subprojects {
   apply plugin: 'java'
 
-  sourceCompatibility = JavaVersion.VERSION_11
-  targetCompatibility = JavaVersion.VERSION_11
+  sourceCompatibility = JavaVersion.VERSION_21
+  targetCompatibility = JavaVersion.VERSION_21
 
   ext {
-    lombokVersion = "1.18.20"
+    lombokVersion = "1.18.38"
   }
 
   repositories {
@@ -17,11 +17,13 @@ subprojects {
   }
 
   dependencies {
+    implementation 'org.hibernate.validator:hibernate-validator:9.0.1.Final'
+    implementation "org.glassfish:jakarta.el:4.0.0"
 
     compileOnly "org.projectlombok:lombok:${lombokVersion}"
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testCompileOnly "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
-
+    testImplementation("org.mockito:mockito-inline:5.2.0")
   }
 }

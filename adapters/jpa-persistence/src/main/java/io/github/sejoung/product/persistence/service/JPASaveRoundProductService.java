@@ -1,12 +1,12 @@
 package io.github.sejoung.product.persistence.service;
 
-import javax.transaction.Transactional;
 
 import io.github.sejoung.product.entities.RoundProduct;
 
 import io.github.sejoung.product.persistence.mapper.RoundProductMapper;
 import io.github.sejoung.product.persistence.repository.ProductRepository;
 import io.github.sejoung.product.usecases.port.out.SaveRoundProductOutUseCase;
+import jakarta.transaction.Transactional;
 
 public class JPASaveRoundProductService implements SaveRoundProductOutUseCase {
 

@@ -7,10 +7,9 @@ jar {
 }
 
 dependencies {
-  implementation 'javax.validation:validation-api:2.0.1.Final'
-
-  testImplementation 'org.hibernate:hibernate-validator:6.2.0.Final'
-  testImplementation 'org.glassfish:javax.el:3.0.0'
-  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+  implementation 'jakarta.validation:jakarta.validation-api:3.1.1'
+  implementation 'org.hibernate.validator:hibernate-validator:9.0.1.Final'
+  testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.12.2'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.12.2'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.12.2'
 }

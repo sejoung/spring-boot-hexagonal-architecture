@@ -1,17 +1,16 @@
 package io.github.sejoung.product.persistence.entities;
 
-import java.time.LocalDate;
-
-import javax.persistence.Column;
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
-
 import io.github.sejoung.product.persistence.constants.ProductStatus;
 import io.github.sejoung.product.persistence.constants.ProductType;
+import jakarta.persistence.Column;
+import jakarta.persistence.DiscriminatorValue;
+import jakarta.persistence.Entity;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+
+import java.time.LocalDate;
 
 @ToString(callSuper = true)
 @DiscriminatorValue(PeriodProductEntity.DISCRIMINATOR_VALUE)

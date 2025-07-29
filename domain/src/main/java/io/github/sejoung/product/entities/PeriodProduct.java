@@ -1,11 +1,10 @@
 package io.github.sejoung.product.entities;
 
-import java.time.LocalDate;
-
-import javax.validation.constraints.NotNull;
-
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.ToString;
+
+import java.time.LocalDate;
 
 @Getter
 @ToString(callSuper = true)

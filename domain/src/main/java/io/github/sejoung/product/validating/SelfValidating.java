@@ -1,8 +1,9 @@
 package io.github.sejoung.product.validating;
 
-import javax.validation.ConstraintViolationException;
-import javax.validation.Validation;
-import javax.validation.Validator;
+
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
 
 public abstract class SelfValidating<T> {
 

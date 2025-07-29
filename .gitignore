@@ -108,3 +108,4 @@ fabric.properties
 .DS_Store
 
 build/
+!gradle-wrapper.jar

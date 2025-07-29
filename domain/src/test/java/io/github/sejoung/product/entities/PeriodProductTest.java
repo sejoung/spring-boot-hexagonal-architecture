@@ -1,13 +1,13 @@
 package io.github.sejoung.product.entities;
 
-import static org.junit.jupiter.api.Assertions.*;
+import jakarta.validation.ConstraintViolationException;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import javax.validation.ConstraintViolationException;
-
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 
